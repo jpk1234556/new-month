@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Month Wishes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Happy New Month Wishes</h1>
+            <p>Professional Greetings for December<br>From the Heart of the Nile Hub</p>
+        </header>
+
+        <main>
+            <section class="message-form">
+                <h2>Create Your Message</h2>
+                <form id="wishForm">
+                    <div class="form-group">
+                        <label for="recipientName">Recipient's Name:</label>
+                        <input type="text" id="recipientName" placeholder="Enter recipient's name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customMessage">Additional Message:</label>
+                        <textarea id="customMessage" placeholder="Add your personal message here..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit">Generate Message</button>
+                </form>
+            </section>
+
+            <section class="message-display" id="messageDisplay" style="display: none;">
+                <div class="card">
+                    <h2>Your Personalized Message</h2>
+                    <div class="message-content">
+                        <p id="generatedMessage"></p>
+                    </div>
+                    <div class="sender-info">
+                        <p>Sent with love from <span id="senderName">Nile Hub</span></p>
+                    </div>
+                </div>
+                
+                <div class="share-section">
+                    <h3>Share Your Message</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn whatsapp" onclick="shareToWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </button>
+                        <button class="share-btn facebook" onclick="shareToFacebook()">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </button>
+                        <button class="share-btn instagram" onclick="shareToInstagram()">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </button>
+                        <button class="share-btn tiktok" onclick="shareToTikTok()">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </button>
+                    </div>
+                    
+                    <div class="link-share">
+                        <h4>Or share via link:</h4>
+                        <div class="link-container">
+                            <input type="text" id="shareLink" readonly>
+                            <button onclick="copyLink()">Copy Link</button>
+                        </div>
+                        <div class="flyer-link">
+                            <h4>Or get a printable flyer:</h4>
+                            <a href="flyer.html" target="_blank" class="flyer-button">Generate Flyer</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="developer-info">
+                <img src="profile.jpg" alt="Developer Profile" class="profile-pic">
+                <div class="contact-info">
+                    <h3>Nile Hub</h3>
+                    <p>Professional Web & Software Developer</p>
+                    <p>Based along the River Nile</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/254741008271">0741008271</a></p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Happy New Month Wishes by Nile Hub. All rights reserved.<br>Proudly serving clients along the River Nile region.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

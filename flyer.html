@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Month Flyer</title>
+    <link rel="stylesheet" href="flyer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="flyer-container">
+        <div class="flyer-content">
+            <div class="header-section">
+                <h1>Happy New Month!</h1>
+                <div class="divider"></div>
+                <p class="month-name">December 2023</p>
+            </div>
+
+            <div class="message-section">
+                <div class="recipient-message">
+                    <p>Dear <span id="recipientName">Friend</span>,</p>
+                    <p>Wishing you a blessed and prosperous new month ahead!</p>
+                    <p class="personal-message" id="personalMsg"></p>
+                    <p>May this new month bring you:</p>
+                    <ul>
+                        <li>Abundant blessings</li>
+                        <li>Success in all endeavors</li>
+                        <li>Good health and happiness</li>
+                        <li>Peace and joy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="closing-section">
+                <p>With warm regards,<br>
+                <strong>Nile Hub</strong></p>
+                <p class="contact-info">
+                    <i class="fab fa-whatsapp"></i> +254 741 008 271<br>
+                    Based along the River Nile
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <div class="logo-placeholder">
+                    <i class="fas fa-water"></i>
+                    <span>Nile Hub</span>
+                </div>
+                <p class="tagline">Professional Web & Software Development</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipient = urlParams.get('to');
+        const message = urlParams.get('msg');
+        
+        // Update flyer content
+        if (recipient) {
+            document.getElementById('recipientName').textContent = recipient;
+        }
+        
+        if (message) {
+            document.getElementById('personalMsg').textContent = `"${message}"`;
+        }
+        
+        // Set current month and year
+        const now = new Date();
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        document.querySelector('.month-name').textContent = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+    </script>
+</body>
+</html>
