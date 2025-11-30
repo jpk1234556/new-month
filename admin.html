@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Visitor Statistics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visitor Statistics</h1>
+            <p>Admin panel for tracking website visitors</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>📊 Visitor Overview</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Visits</h3>
+                        <p id="totalVisits">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Unique Visitors</h3>
+                        <p id="uniqueVisitors">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Today's Visits</h3>
+                        <p id="todaysVisits">0</p>
+                    </div>
+                </div>
+                
+                <div class="visits-chart">
+                    <h3>Visits by Date</h3>
+                    <div id="visitsByDate">
+                        <p>No visit data available yet.</p>
+                    </div>
+                </div>
+                
+                <button onclick="resetStats()" class="reset-btn">Reset Statistics</button>
+            </section>
+        </main>
+
+        <footer>
+            <div class="developer-info">
+                <img src="profile.jpg" alt="Developer Profile" class="profile-pic">
+                <div class="contact-info">
+                    <h3>Nile Hub</h3>
+                    <p>Professional Web & Software Developer</p>
+                    <p>Based along the River Nile</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/254741008271">0741008271</a></p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Happy New Month Wishes by Nile Hub. All rights reserved.<br>Proudly serving clients along the River Nile region.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

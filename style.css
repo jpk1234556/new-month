@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #B0C4DE, #87CEEB, #4682B4, #B0C4DE);
+    background: linear-gradient(135deg, #FFD700, #FFA500, #1E90FF, #FFD700);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: #333;
@@ -36,25 +36,22 @@ header {
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-    color: #4682B4;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 header p {
     font-size: 1.2rem;
-    color: #5F9EA0;
-    font-weight: 500;
+    opacity: 0.9;
 }
 
 /* Main Content */
 main {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     margin-bottom: 30px;
-    border: 1px solid rgba(176, 196, 222, 0.5);
 }
 
 /* Form Styles */
@@ -82,20 +79,36 @@ main {
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #B0C4DE;
-    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 2px #4682B4;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 2px #FFA500;
+}
+
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="tel"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 2px #FFA500;
 }
 
 .form-group textarea {
@@ -104,8 +117,8 @@ main {
 }
 
 button {
-    background: linear-gradient(45deg, #4682B4, #5F9EA0);
-    color: white;
+    background: linear-gradient(45deg, #FFA500, #FFD700);
+    color: #333;
     border: none;
     padding: 15px 30px;
     border-radius: 50px;
@@ -122,7 +135,7 @@ button {
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(70, 130, 180, 0.3);
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
 }
 
 /* Message Display */
@@ -130,13 +143,22 @@ button:hover {
     text-align: center;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
+.secret-santa-section .card {
+    background: rgba(255, 245, 230, 0.9);
+    border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(176, 196, 222, 0.7);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFD700;
+}
+
+.card {
+    background: rgba(255, 245, 230, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFD700;
 }
 
 .card h2 {
@@ -149,20 +171,92 @@ button:hover {
     line-height: 1.6;
     margin: 25px 0;
     padding: 20px;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
     min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #B0C4DE;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 2px dashed #FFA500;
 }
 
 .sender-info {
     font-style: italic;
     opacity: 0.8;
     margin-top: 20px;
+}
+
+/* Secret Santa Section */
+.secret-santa-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.secret-santa-section p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-setup, .game-result {
+    margin: 20px 0;
+}
+
+.assignment {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px dashed #FFA500;
+}
+
+.assignment p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.game-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.game-options button {
+    flex: 1;
+    min-width: 120px;
+}
+
+#savedGames ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#savedGames li {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border-left: 3px solid #FFA500;
+}
+
+#savedGames button {
+    background: linear-gradient(45deg, #ff6b6b, #ffa502);
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#savedGames button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Share Section */
@@ -223,11 +317,10 @@ button:hover {
     flex: 1;
     padding: 12px 15px;
     border-radius: 50px;
-    border: 1px solid #B0C4DE;
-    background: rgba(255, 255, 255, 1);
+    border: 2px solid #FFD700;
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
     font-size: 1rem;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .link-container button {
@@ -236,32 +329,13 @@ button:hover {
     padding: 12px 20px;
 }
 
-.flyer-button {
-    display: inline-block;
-    background: linear-gradient(45deg, #4682B4, #5F9EA0);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(70, 130, 180, 0.3);
-    margin-top: 15px;
-}
-
-.flyer-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(70, 130, 180, 0.4);
-    background: linear-gradient(45deg, #5F9EA0, #4682B4);
-}
-
 /* Footer */
 footer {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
     padding: 30px;
     text-align: center;
-    border: 1px solid rgba(176, 196, 222, 0.5);
+    border: 2px solid #FFD700;
 }
 
 .developer-info {
@@ -277,8 +351,8 @@ footer {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #4682B4;
-    box-shadow: 0 0 20px rgba(70, 130, 180, 0.3);
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
 .contact-info h3 {
@@ -301,14 +375,14 @@ footer {
 }
 
 .social-links a {
-    color: #4682B4;
+    color: #333;
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     transform: translateY(-5px);
-    color: #5F9EA0;
+    color: #1E90FF;
 }
 
 .copyright {
@@ -316,6 +390,109 @@ footer {
     padding-top: 20px;
     opacity: 0.7;
     color: #333;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    min-width: 150px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFA500;
+    margin: 0;
+}
+
+.visits-chart {
+    margin: 30px 0;
+}
+
+.visits-chart h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    border: 2px dashed #FFA500;
+}
+
+.chart-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.bar {
+    width: 40px;
+    background: linear-gradient(to top, #FFA500, #FFD700);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    min-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.visits-count {
+    position: absolute;
+    top: -25px;
+}
+
+.date-label {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.reset-btn {
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
 }
 
 /* Responsive Design */
@@ -356,11 +533,17 @@ footer {
     }
     
     .link-container input,
-    .link-container button,
-    .flyer-button {
+    .link-container button {
+        width: 100%;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-card {
         width: 100%;
         max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }

@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <h1>Happy New Month Wishes</h1>
-            <p>Professional Greetings for December<br>From the Heart of the Nile Hub</p>
+            <p>Create and share personalized New Month greetings<br>From the Heart of the Nile Hub</p>
         </header>
 
         <main>
@@ -30,6 +30,86 @@
                     
                     <button type="submit">Generate Message</button>
                 </form>
+            </section>
+
+            <section class="secret-santa-section">
+                <div class="card">
+                    <h2>🎄 Secret Santa Game 🎁</h2>
+                    <p>Play a fun Secret Santa game with your friends and family!</p>
+                    
+                    <div class="game-setup" id="santaSetup">
+                        <h3>Set Up Your Game</h3>
+                        <div class="form-group">
+                            <label for="participantName">Your Name:</label>
+                            <input type="text" id="participantName" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="participantPhone">Your WhatsApp Number (optional):</label>
+                            <input type="tel" id="participantPhone" placeholder="e.g. +254712345678">
+                        </div>
+                        <div class="form-group">
+                            <label for="participantList">Enter participant names and numbers (name:number, comma separated):</label>
+                            <textarea id="participantList" placeholder="e.g. John:+254712345678, Mary:+254723456789, David:+254734567890" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exclusions">Any exclusions? (Enter names that shouldn't be paired together, comma separated):</label>
+                            <textarea id="exclusions" placeholder="e.g. John,Mary (John won't be assigned to Mary)" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range:</label>
+                            <select id="budget">
+                                <option value="any">Any amount</option>
+                                <option value="low">Low ($10-$20)</option>
+                                <option value="medium">Medium ($20-$50)</option>
+                                <option value="high">High ($50+)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="wishlist">Your Wishlist (optional):</label>
+                            <textarea id="wishlist" placeholder="Enter items you'd like to receive..." rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="theme">Game Theme:</label>
+                            <select id="theme">
+                                <option value="christmas">Christmas</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="holiday">Holiday</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="rounds">Number of Rounds (for multi-gifting):</label>
+                            <select id="rounds">
+                                <option value="1">1 Round (Traditional)</option>
+                                <option value="2">2 Rounds</option>
+                                <option value="3">3 Rounds</option>
+                            </select>
+                        </div>
+                        <button onclick="startSecretSanta()">Start Game</button>
+                    </div>
+                    
+                    <div class="game-result" id="santaResult" style="display: none;">
+                        <h3>Your Secret Santa Assignment</h3>
+                        <div class="assignment">
+                            <p>You are <span id="participantNameDisplay"></span></p>
+                            <p>Your Secret Santa recipient is: <strong id="recipientAssignment"></strong></p>
+                            <div id="recipientWishlist" style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.5); border-radius: 10px;"></div>
+                            <p>Budget: <span id="budgetDisplay"></span></p>
+                            <p>Theme: <span id="themeDisplay"></span></p>
+                        </div>
+                        <div class="game-options">
+                            <button onclick="resetSecretSanta()">Play Again</button>
+                            <button onclick="saveGame()">Save Game</button>
+                            <button onclick="showSavedGames()">View Saved Games</button>
+                        </div>
+                        <div id="savedGames" style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.3); border-radius: 10px; display: none;">
+                            <h4>Saved Games:</h4>
+                            <ul id="savedGamesList"></ul>
+                            <button onclick="clearSavedGames()">Clear All Saved Games</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="message-display" id="messageDisplay" style="display: none;">
@@ -65,10 +145,6 @@
                         <div class="link-container">
                             <input type="text" id="shareLink" readonly>
                             <button onclick="copyLink()">Copy Link</button>
-                        </div>
-                        <div class="flyer-link">
-                            <h4>Or get a printable flyer:</h4>
-                            <a href="flyer.html" target="_blank" class="flyer-button">Generate Flyer</a>
                         </div>
                     </div>
                 </div>
